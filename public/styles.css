@@ -10,3 +10,45 @@ body {
     height: 100vh;
   }
   
+  h1.main-text{
+    font-family: "Inria Serif";
+    font-weight: bold;
+    font-size: 57px;
+    color: white;
+  }
+
+  div.centeredY{
+    position: absolute;
+    top: 50%;
+    left:80px;
+    transform: translate(0%, -50%);
+  }
+  
+  button.main-button{
+    position: absolute;
+    top: 65%;
+    left: 80px;
+    width: 165px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #6D5F2A;
+    color: white;
+    font-family: "Karla";
+    font-size: 19px;
+    font-weight: 200;
+    border: none;
+  }
+
+  .navigation-home{
+    width: 100vw;
+    
+    background-color: rgba(5, 5, 5, 0.42);
+    font-family: "Inria Serif";
+    font-weight: 200;
+    font-size: 19px;
+    color: white;
+  }
+
+  .margin-left{
+    margin-left: 80px;
+  }

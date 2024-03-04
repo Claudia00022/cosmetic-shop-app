@@ -62,8 +62,8 @@ import { NavLink } from "react-router-dom";
 
 function CollapseNavbar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
-      <Container>
+    <Navbar collapseOnSelect expand="lg" className="navigation-home" >
+         <div className=" container-fluid">
         <Navbar.Brand href="#">logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -73,7 +73,8 @@ function CollapseNavbar() {
             <NavLink to ="HairCare" className ="nav-item nav-link">hair care</NavLink>
           </Nav>
         </Navbar.Collapse>
-      </Container>
+        </div>
+ 
     </Navbar>
   );
 }
