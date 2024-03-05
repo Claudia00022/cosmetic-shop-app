@@ -59,22 +59,58 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 
-
 function CollapseNavbar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="navigation-home" >
-         <div className=" container-fluid">
-        <Navbar.Brand href="#">logo</Navbar.Brand>
+    <Navbar collapseOnSelect expand="lg" className="navigation-home">
+      <div className=" container-fluid">
+        <Navbar.Brand className="me-5 text-white" href="#">
+          logo
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <NavLink to ="skinCare" className ="nav-item nav-link">skin care</NavLink>
-            <NavLink to ="bodyCare" className ="nav-item nav-link">body care</NavLink>
-            <NavLink to ="HairCare" className ="nav-item nav-link">hair care</NavLink>
+          <Nav className="w-100">
+            <div className="d-flex">
+              <NavLink
+                to="skinCare"
+                className="nav-item nav-link me-5 text-white "
+              >
+                skin care
+              </NavLink>
+              <NavLink
+                to="bodyCare"
+                className="nav-item nav-link me-5 text-white"
+              >
+                body care
+              </NavLink>
+              <NavLink
+                to="HairCare"
+                className="nav-item nav-link me-5 text-white"
+              >
+                hair care
+              </NavLink>
+            </div>
+            <div className="d-flex ms-md-auto ">
+              <button className="btn btn-primary">
+                <NavLink
+                  to="HairCare"
+                  className="nav-item nav-link text-white "
+                >
+                  Log In
+                </NavLink>
+              </button>
+              <div>
+                {" "}
+                <NavLink
+                  to="HairCare"
+                  className="nav-item nav-link me-5 text-white"
+                >
+                  <span class="material-symbols-outlined">shopping_cart</span>
+                </NavLink>
+              </div>
+            </div>
           </Nav>
         </Navbar.Collapse>
-        </div>
- 
+      </div>
     </Navbar>
   );
 }
