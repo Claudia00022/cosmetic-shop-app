@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import SkinCare from "./pages/SkinCare";
 import BodyCare from "./pages/BodyCare";
 import HairCare from "./pages/HairCare";
+import "./styles.css"
 
 function App() {
   return (

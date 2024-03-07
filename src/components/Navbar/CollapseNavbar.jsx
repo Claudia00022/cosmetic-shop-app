@@ -9,7 +9,7 @@ const logo =  <FontAwesomeIcon icon={faSpa} size="lg" style={{color: "#ffffff",}
 
 function CollapseNavbar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="navigation-home">
+    <Navbar collapseOnSelect expand="lg" className="navigation-home ">
       <div className=" container-fluid">
         <Navbar.Brand className="me-5 text-white logo" href="#">
           logo <span className="ms-3">{logo}</span>
