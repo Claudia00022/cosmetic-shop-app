@@ -1,4 +1,4 @@
-
+import React, {useState} from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
@@ -8,10 +8,23 @@ import { faSpa } from "@fortawesome/free-solid-svg-icons";
 const logo =  <FontAwesomeIcon icon={faSpa} size="lg" style={{color: "#ffffff",}} />;
 
 function CollapseNavbar() {
+ 
+  const[backgroundColor, setBackgroundColor]= useState("rgba(5, 5, 5, 0.42)");
+  
+
+  function handleButtonClicked(){
+    setBackgroundColor("#98946B");
+  }
+
+  function handleButtonBack(){
+    setBackgroundColor("rgba(5, 5, 5, 0.42)")
+  }
+  
+
   return (
-    <Navbar collapseOnSelect expand="lg" className="navigation-home ">
+    <Navbar collapseOnSelect expand="lg" className="navigation-home" style={{backgroundColor}} >
       <div className=" container-fluid">
-        <Navbar.Brand className="me-5 text-white logo" href="#">
+        <Navbar.Brand onClick={handleButtonBack} className="me-5 text-white logo" href="#">
           logo <span className="ms-3">{logo}</span>
         </Navbar.Brand>
         <div className="right-border"></div>
@@ -20,6 +33,7 @@ function CollapseNavbar() {
           <Nav className="w-100">
             <div className="d-flex align-items-center ">
               <NavLink
+              onClick = {handleButtonClicked}
                 to="skinCare"
                 className="nav-item nav-link  text-white navbar-item "
               >
@@ -27,6 +41,7 @@ function CollapseNavbar() {
               </NavLink>
               <div className="right-border"></div>
               <NavLink
+              onClick = {handleButtonClicked}
                 to="bodyCare"
                 className="nav-item nav-link text-light  navbar-item "
               >
@@ -34,6 +49,7 @@ function CollapseNavbar() {
               </NavLink>
               <div className="right-border"></div>
               <NavLink
+              onClick = {handleButtonClicked}
                 to="HairCare"
                 className="nav-item nav-link  text-white navbar-item "
               >

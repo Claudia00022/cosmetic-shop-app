@@ -45,12 +45,14 @@ body {
     z-index: 1000;
     width: 100vw;
     
-    background-color: rgba(5, 5, 5, 0.42);
+    
+  
     font-family: "Inria Serif";
     font-weight: 100;
     font-size: 18px;
     color: white;
   }
+
 
   .margin-left{
     margin-left: 80px;
