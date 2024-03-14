@@ -3,10 +3,10 @@ import CollapseNavbar from "./components/Navbar/CollapseNavbar";
 import { Outlet } from "react-router-dom";
 
 
-function Layout(){
+function Layout({...props}){
     return(
         <>
-            <CollapseNavbar />
+            <CollapseNavbar {...props} />
             <main>
                 <Outlet />
             </main>

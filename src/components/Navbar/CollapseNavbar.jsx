@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
@@ -7,24 +7,16 @@ import { faSpa } from "@fortawesome/free-solid-svg-icons";
 
 const logo =  <FontAwesomeIcon icon={faSpa} size="lg" style={{color: "#ffffff",}} />;
 
-function CollapseNavbar() {
+function CollapseNavbar(props) {
  
-  const[backgroundColor, setBackgroundColor]= useState("rgba(5, 5, 5, 0.42)");
-  
 
-  function handleButtonClicked(){
-    setBackgroundColor("#98946B");
-  }
 
-  function handleButtonBack(){
-    setBackgroundColor("rgba(5, 5, 5, 0.42)")
-  }
   
 
   return (
-    <Navbar collapseOnSelect expand="lg" className="navigation-home" style={{backgroundColor}} >
+    <Navbar collapseOnSelect expand="lg" className="navigation-home" style={{backgroundColor: props.backgroundColorNav}} >
       <div className=" container-fluid">
-        <Navbar.Brand onClick={handleButtonBack} className="me-5 text-white logo" href="#">
+        <Navbar.Brand onClick={props.handleButtonBack} className="me-5 text-white logo" href="#">
           logo <span className="ms-3">{logo}</span>
         </Navbar.Brand>
         <div className="right-border"></div>
@@ -33,7 +25,7 @@ function CollapseNavbar() {
           <Nav className="w-100">
             <div className="d-flex align-items-center ">
               <NavLink
-              onClick = {handleButtonClicked}
+              onClick = {props.handleButtonClicked}
                 to="skinCare"
                 className="nav-item nav-link  text-white navbar-item "
               >
@@ -41,7 +33,7 @@ function CollapseNavbar() {
               </NavLink>
               <div className="right-border"></div>
               <NavLink
-              onClick = {handleButtonClicked}
+              onClick = {props.handleButtonClicked}
                 to="bodyCare"
                 className="nav-item nav-link text-light  navbar-item "
               >
@@ -49,7 +41,7 @@ function CollapseNavbar() {
               </NavLink>
               <div className="right-border"></div>
               <NavLink
-              onClick = {handleButtonClicked}
+              onClick = {props.handleButtonClicked}
                 to="HairCare"
                 className="nav-item nav-link  text-white navbar-item "
               >
@@ -58,10 +50,11 @@ function CollapseNavbar() {
               <div className="right-border"></div>
             </div>
             <div className="d-flex ms-md-auto align-items-center ">
-              <button className="logIn-btn">
+              <button className="logIn-btn" style={{borderColor: props.borderColor}}>
                 <NavLink
                   to="HairCare"
                   className="nav-item nav-link text-white  "
+                 
                 >
                   Log In
                 </NavLink>
